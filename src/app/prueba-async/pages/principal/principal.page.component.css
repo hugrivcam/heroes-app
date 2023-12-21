@@ -1,0 +1,51 @@
+body {
+  /*background-color: #523863; /* Cambia el color de fondo a tu elección. */
+  background: linear-gradient(to bottom, #a712ec, #749ec7);
+}
+
+.caja{
+  width : 25px;
+  height: 25px;
+  padding: 2px;
+  margin: 2px;
+  /*background-color: cornflowerblue;*/
+  border-radius: 20%;
+  border-style: solid;
+  align-items: center;
+  text-align: center;
+  color:aliceblue;
+  border-color: rgb(4, 255, 0);
+  /*text-decoration-color: rgb(197, 38, 157);*/
+}
+
+.cajita{
+  width : auto;
+  height: 30px;
+  min-width: 30px;
+  padding: 2px;
+  margin: 2px;
+  background-color: rgb(5, 29, 74);
+  border-radius: 20%;
+  border-style: solid;
+  align-items: center;
+  text-align: center;
+  color:aliceblue;
+  border-color: rgb(55, 0, 255);
+  /*text-decoration-color: rgb(197, 38, 157);*/
+}
+.titulo{
+  width : auto;
+  max-width: 500px;
+  height: 30px;
+  min-width: 30px;
+  padding: 2px;
+  margin: 2px;
+  background-color: rgb(5, 29, 74);
+  border-radius: 0%;
+  border-style:double;
+  align-items: center;
+  text-align: center;
+  color:rgb(253, 255, 240);
+  border-color: rgb(0, 208, 255);
+  /*text-decoration-color: rgb(197, 38, 157);*/
+}

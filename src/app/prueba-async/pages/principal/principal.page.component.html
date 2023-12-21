@@ -1,0 +1,19 @@
+<body>
+  <div style="display:flex;align-items: center;justify-content: center;">
+  <h1 class="titulo" sytyle = "color:white;border-radius: 0%;">Test procesos concurrentes</h1>
+  </div>
+  <div class="grid col-2">
+    <h3 style="margin-top: 10px;margin-right: 10px;">Total Vivos:</h3> <h1 class ="cajita">{{totalVivos}}</h1>
+    <!-- [style.background-color]="'green'" [style.color] = "'white'" [style.hover.background-color]="'darkgreen'" -->
+    <button mat-raised-button style="cursor: pointer;width: auto;height: 30px;margin-left: 10px;margin-top:6px"  (click)="Stop_start()">
+    {{label1}}
+    </button>
+  </div>
+  <hr>
+  <div class="grid col-12" >
+      <div *ngFor="let item of listaSeres" class="caja" [ngStyle]="{'border-color': item.colorBorde,'background-color':item.backColor}">
+        {{item.life}}
+        <!-- : {{item.colorBorde}} : {{item.iluminar}} : {{item.colorBorde}} -->
+      </div>
+  </div>
+</body>

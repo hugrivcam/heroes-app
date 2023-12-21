@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.css';
+/* @import '/node_modules/primeflex/primeflex.css';  */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* .item	{	
+    	//flex:	<flex-grow>	<flex-shrink>	<flex-basis>	
+    flex:	1	3	35%;	
+} */
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.con-margen {
+    margin-right: 8px;
+}

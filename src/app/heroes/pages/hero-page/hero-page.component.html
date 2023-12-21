@@ -1,0 +1,43 @@
+<!-- <p *ngIf="!hero">hero-page works!</p>
+<h1 *ngIf="hero !== undefined">{{hero.id}}</h1> -->
+
+<div *ngIf="hero; else divLoading" class = "grid">
+    <mat-card class = "lg:col-3 sm:col-2">
+        <mat-card-header>
+            <mat-card-title>{{hero.alter_ego}}</mat-card-title>
+            <mat-card-subtitle>{{hero.superhero}}</mat-card-subtitle>
+        </mat-card-header>
+        <img [src]="hero | heroImage" alt="imagen no carga" mat-card-image />
+    </mat-card>
+    <!-- {{hero | json}} -->
+    <mat-card class = "lg:col-3 sm:col-2" style="color:aqua ;background-color: darkblue;">
+        <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle style="color:antiquewhite">{{hero.superhero}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item><span style="color:aqua">Primera Aparición: </span> <span style="color:antiquewhite">{{hero.first_appearance}}</span></mat-list-item>
+                <mat-list-item><span style="color:aqua">Personajes:</span>  <span style="color:antiquewhite"> {{hero.characters}}</span> </mat-list-item>
+                <mat-list-item><span style="color:aqua">Creador: </span>    <span style="color:antiquewhite"> {{hero.publisher}} </span> </mat-list-item>
+                <mat-list-item><span style="color:aqua">AlterEgo: </span>    <span style="color:antiquewhite"> {{hero.alter_ego}} </span> </mat-list-item>
+            </mat-list>
+          
+            <div style="display:flex;justify-content:center">
+                <!-- <button mat-raised-button color="warn" (click)="goBack()"> -->
+                <button mat-raised-button [style.background-color]="'green'" [style.color] = "'white'" [style.hover.background-color]="'darkgreen'"  (click)="goBack()">
+                    Regresar
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>    
+</div>
+
+
+<ng-template #divLoading>
+    <mat-grid-list cols = "1">
+      <mat-grid-tile>
+          <mat-spinner></mat-spinner>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </ng-template>
